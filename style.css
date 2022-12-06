@@ -6,9 +6,11 @@ body{
 
 h1{
     font-size: 1.2rem;
-    font-family:'Roboto mono',monospace;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
     padding-bottom: 20px;
+    color: #659cfbe5;
+
 }
 
 section{
@@ -42,7 +44,7 @@ section{
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0,139,253,0.25);
+    box-shadow: 0 0 20px #04b0ff42;
 }
 
 .button-group{
@@ -72,8 +74,33 @@ section{
   }
 
   .result {
-    padding: 20px;;
+    margin-top: 10px;
+    padding: 30px;;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+    color: #0381bbb3;
+    letter-spacing: 2px;
+
+  }
+
+  @media only screen and (max-width: 700px){
+    * {
+        font-size: 60%;
+    }
+
+    .button-group .button {
+        font-size: 16px;
+        width: 100%;
+        margin: 5px;
+    }
+
+    .button-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
   }
