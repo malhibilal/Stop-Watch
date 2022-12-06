@@ -3,6 +3,7 @@ let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 let timer = false;
+let stopTimes = [];
 
 function startTime() {
   timer = true;
@@ -27,7 +28,7 @@ function resetTime() {
 }
 
 function runTime() {
-  if (timer == true) {
+  if (timer) {
     milliseconds++;
   }
 
@@ -46,39 +47,35 @@ function runTime() {
     minutes = 0;
   }
 
-  if (milliseconds< 10) {
-    document.querySelector("#milliseconds").innerHTML = "0" + milliseconds;
-  } else {
-    document.querySelector("#milliseconds").innerHTML = milliseconds;
-  }
+  document.querySelector("#milliseconds").innerHTML = twoDigits(milliseconds);
+  document.querySelector("#seconds").innerHTML = twoDigits(seconds);
+  document.querySelector("#minutes").innerHTML = twoDigits(minutes);
+  document.querySelector("#hours").innerHTML = twoDigits(hours);
 
-  if (seconds < 10) {
-    document.querySelector("#seconds").innerHTML = "0" + seconds;
-  } else {
-    document.querySelector("#seconds").innerHTML = seconds;
-  }
-  if (minutes < 10) {
-    document.querySelector("#minutes").innerHTML = "0" + minutes;
-  } else {
-    document.querySelector("#minutes").innerHTML = minutes;
-  }
-  if (hours < 10) {
-    document.querySelector("#hours").innerHTML = "0" + hours;
-  } else {
-    document.querySelector("#hours").innerHTML = hours;
-  }
   setTimeout("runTime()", 10); //metod för att räkna upp tid.
 }
 
-function printPausTime () {
-   let values = document.querySelectorAll(".display");
-   console.log(values);
-   values.forEach(function (element) {
-/*     document.querySelector(".result").innerHTML = element; */
-  });
-
+function twoDigits(number) {
+  if (number < 10) {
+    return "0" + number;
+  } else {
+    return number.toString();
+  }
 }
 
-/* 
-const paragraphs = document.querySelectorAll('p');
-paragraphs.forEach(p => console.log(p)); */
+function printPausTime() {
+  let str = "The times is: ";
+
+ 
+
+  for (let i = 0; i < 10; i++) {
+
+    stopTimes.push(
+        `${str} ${twoDigits(hours)} ${twoDigits(minutes)} ${twoDigits(
+          seconds
+        )} ${twoDigits(milliseconds)}`
+      );
+
+    document.querySelector(".result").innerHTML = stopTimes[i];
+  }
+}
