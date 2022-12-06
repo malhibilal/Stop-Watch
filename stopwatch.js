@@ -70,17 +70,3 @@ function printPausTime() {
   newTime.innerText = timeStr;
   document.querySelector(".result").appendChild(newTime);
 }
-
-//  document.querySelector(".result").innerHTML = timeStr;
-/*
-  for(let i = 0; i < 10; i++){
-    let timeLaps = stopTimes[i];
-    let newRowSpan = document.createElement('span');
-    newRowSpan.innerHTML = timeLaps;
-    let list = document.createElement('li');
-    list.appendChild(newRowSpan);
-    }
-    
-  
-
- /*  for (let i = 0; i <= stopTimes.length; i++) { */
