@@ -25,6 +25,7 @@ function resetTime() {
   document.querySelector("#seconds").innerHTML = "00";
   document.querySelector("#minutes").innerHTML = "00";
   document.querySelector("#hours").innerHTML = "00";
+  document.querySelector(".result").innerHTML = ""; 
 }
 
 function runTime() {
@@ -65,16 +66,22 @@ function twoDigits(number) {
 
 function printPausTime() {
   let str = "The times is: ";
-
   let timeStr = `${str} ${twoDigits(hours)} ${twoDigits(minutes)} ${twoDigits(seconds)} ${twoDigits(milliseconds)}`;
+  document.querySelector(".result").innerHTML = timeStr;
 
-  stopTimes.push(timeStr);
-  console.log(stopTimes);
+  /* stopTimes.push(timeStr);
 
+  for(let i = 0; i < 10; i++){
+    let timeLaps = stopTimes[i];
+    let newRowSpan = document.createElement('span');
+    newRowSpan.innerHTML = timeLaps;
+    let list = document.createElement('li');
+    list.appendChild(newRowSpan);
+    }
+    
   
 
  /*  for (let i = 0; i <= stopTimes.length; i++) { */
-document.querySelector(".result").innerHTML = stopTimes;
 
- /*  } */
+
 }
