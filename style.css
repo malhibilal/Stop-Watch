@@ -76,9 +76,6 @@ section{
   .result {
     margin-top: 10px;
     padding: 30px;;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.2rem;
     color: #0381bbb3;
