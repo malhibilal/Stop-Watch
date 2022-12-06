@@ -11,6 +11,7 @@ function startTime() {
 
 function pausTime() {
   timer = false;
+  printPausTime();
 }
 
 function resetTime() {
@@ -45,7 +46,11 @@ function runTime() {
     minutes = 0;
   }
 
-  document.querySelector("#milliseconds").innerHTML = milliseconds;
+  if (milliseconds< 10) {
+    document.querySelector("#milliseconds").innerHTML = "0" + milliseconds;
+  } else {
+    document.querySelector("#milliseconds").innerHTML = milliseconds;
+  }
 
   if (seconds < 10) {
     document.querySelector("#seconds").innerHTML = "0" + seconds;
@@ -64,3 +69,16 @@ function runTime() {
   }
   setTimeout("runTime()", 10); //metod för att räkna upp tid.
 }
+
+function printPausTime () {
+   let values = document.querySelectorAll(".display");
+   console.log(values);
+   values.forEach(function (element) {
+/*     document.querySelector(".result").innerHTML = element; */
+  });
+
+}
+
+/* 
+const paragraphs = document.querySelectorAll('p');
+paragraphs.forEach(p => console.log(p)); */
