@@ -66,16 +66,15 @@ function twoDigits(number) {
 function printPausTime() {
   let str = "The times is: ";
 
- 
+  let timeStr = `${str} ${twoDigits(hours)} ${twoDigits(minutes)} ${twoDigits(seconds)} ${twoDigits(milliseconds)}`;
 
-  for (let i = 0; i < 10; i++) {
+  stopTimes.push(timeStr);
+  console.log(stopTimes);
 
-    stopTimes.push(
-        `${str} ${twoDigits(hours)} ${twoDigits(minutes)} ${twoDigits(
-          seconds
-        )} ${twoDigits(milliseconds)}`
-      );
+  
 
-    document.querySelector(".result").innerHTML = stopTimes[i];
-  }
+ /*  for (let i = 0; i <= stopTimes.length; i++) { */
+document.querySelector(".result").innerHTML = stopTimes;
+
+ /*  } */
 }
