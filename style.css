@@ -1,4 +1,4 @@
-
+/* ELEMENTS */
 
 body{
   background: #448aff;
@@ -25,6 +25,7 @@ section{
     align-items: center;
 }
 
+/* CLASSES */
 .center {
     display: flex;
     align-items: center;
@@ -83,6 +84,7 @@ section{
 
   }
 
+  /* MEDIA QUERY*/
   @media only screen and (max-width: 700px){
     * {
         font-size: 80%;
