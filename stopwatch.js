@@ -7,11 +7,13 @@ let timer = false;
 function startTime() {
   timer = true;
   runTime();
+  document.querySelector(".fa-apple").classList.add("fa-spin");
 }
 
 function pausTime() {
   timer = false;
   printPausTime();
+  document.querySelector(".fa-apple").classList.remove("fa-spin");
 }
 
 function resetTime() {
