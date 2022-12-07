@@ -54,7 +54,7 @@ function runTime() {
 	document.querySelector("#minutes").innerHTML = twoDigits(minutes);
 	document.querySelector("#hours").innerHTML = twoDigits(hours);
 
-	setTimeout("runTime()", 10); //metod för att räkna upp tid.
+	setTimeout(runTime, 10); //metod för att räkna upp tid.
 }
 
 function twoDigits(number) {
